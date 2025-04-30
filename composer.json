@@ -1,0 +1,14 @@
+{
+    "name": "your-vendor/csv-processor",
+    "description": "A professional WordPress plugin for processing CSV files",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "CSVProcessor\\": "includes/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+} 
