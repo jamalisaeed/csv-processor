@@ -21,6 +21,10 @@ class ComposerStaticInita93051d172f5ec73b0e7689f1e5c3838
     );
 
     public static $classMap = array (
+        'CSVProcessor\\AJAX_Handler' => __DIR__ . '/../..' . '/includes/AJAX_Handler.php',
+        'CSVProcessor\\Admin' => __DIR__ . '/../..' . '/includes/Admin.php',
+        'CSVProcessor\\CSV_Processor' => __DIR__ . '/../..' . '/includes/CSV_Processor.php',
+        'CSVProcessor\\Processor' => __DIR__ . '/../..' . '/includes/Processor.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

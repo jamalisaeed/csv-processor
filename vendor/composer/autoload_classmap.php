@@ -6,5 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CSVProcessor\\AJAX_Handler' => $baseDir . '/includes/AJAX_Handler.php',
+    'CSVProcessor\\Admin' => $baseDir . '/includes/Admin.php',
+    'CSVProcessor\\CSV_Processor' => $baseDir . '/includes/CSV_Processor.php',
+    'CSVProcessor\\Processor' => $baseDir . '/includes/Processor.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
