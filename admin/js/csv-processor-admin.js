@@ -96,7 +96,12 @@ jQuery(document).ready(function($) {
         const results = data.results;
         
         if (state && state.total_processed !== undefined && state.total_rows) {
-            const percentage = Math.min(100, Math.round((state.total_processed / state.total_rows) * 100));
+            let percentage = Math.round((state.total_processed / state.total_rows) * 100);
+            if (results.completed) {
+                percentage = 100;
+            } else if (percentage > 99) {
+                percentage = 99; // Don't show 100% until complete
+            }
             progressBar.css('width', percentage + '%');
             statusPercentage.text(percentage + '%');
         }
@@ -115,6 +120,10 @@ jQuery(document).ready(function($) {
         pauseButton.hide();
         resumeButton.hide();
         
+        // Set progress bar to 100% for sure
+        progressBar.css('width', '100%');
+        statusPercentage.text('100%');
+
         // Show final results
         showResults(data.results);
     }
